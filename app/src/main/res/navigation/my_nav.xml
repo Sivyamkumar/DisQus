@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/qnaFragment"
+    android:id="@+id/my_nav">
+    <fragment
+        android:id="@+id/qnaFragment"
+        android:label="Qna"
+        android:name="com.yuvrajdeshmukh.udghosh.QnaFragment"
+        tools:layout="@layout/fragment_qna"
+        />
+    <fragment
+        android:id="@+id/favoriteFragment"
+        android:label="Favorite"
+        android:name="com.yuvrajdeshmukh.udghosh.FavoriteFragment"
+        tools:layout="@layout/fragment_favorite"/>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:label="Profile"
+        android:name="com.yuvrajdeshmukh.udghosh.ProfileFragment"
+        tools:layout="@layout/fragment_profile"
+        />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:label="Settings"
+        android:name="com.yuvrajdeshmukh.udghosh.SettingsFragment"
+        tools:layout="@layout/fragment_settings"
+        />
+
+</navigation>

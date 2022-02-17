@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "475803746708",
+    "project_id": "udghosh-efecc",
+    "storage_bucket": "udghosh-efecc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:475803746708:android:b5cbcc239aba4206ea0f81",
+        "android_client_info": {
+          "package_name": "com.yuvrajdeshmukh.udghosh"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "475803746708-qh42pmp4onrv8htau9sssfo3fjl9efe9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyADFsIliIuOX3Cln_pd54oqeHZRegv7FpI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "475803746708-qh42pmp4onrv8htau9sssfo3fjl9efe9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
