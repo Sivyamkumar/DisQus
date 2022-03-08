@@ -11,9 +11,8 @@ import com.google.firebase.database.FirebaseDatabase
 class Answer : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.answer)
+        setContentView(R.layout.solution)
 
-        val question : TextView = findViewById(R.id.userquestioninsolution)
         val answer : TextView = findViewById(R.id.answerinanswer)
         val submit : TextView = findViewById(R.id.submitbuttoninanswer)
 

@@ -20,6 +20,8 @@ import kotlin.properties.Delegates
 
 class Register : AppCompatActivity() {
 
+    lateinit var name : String
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.register)
@@ -73,13 +75,16 @@ class Register : AppCompatActivity() {
                             progressBar.visibility = View.GONE
                             dialogbox("Warning!!!","Verify Your Email.")
                             progressBar.visibility = View.VISIBLE
+
                             val map: HashMap<String, Any> = HashMap()
-                            map["Name"] = nametext.text.toString()
+
+                            name = nametext.text.toString()
+                            map["Name"] = name
                             map["Mobile"] = phone.text.toString()
                             map["Password"] = pswd.text.toString()
                             map["Email"] = emailId.text.toString()
 
-                            FirebaseDatabase.getInstance().getReference().child(auth.currentUser?.uid!!).updateChildren(map)
+                            FirebaseDatabase.getInstance().getReference().child("User").child(name).updateChildren(map)
                                 .addOnCompleteListener {
                                     if(it.isSuccessful){
                                         nametext.text.clear()
@@ -114,6 +119,7 @@ class Register : AppCompatActivity() {
         super.onBackPressed()
     }
 
+
     public fun dialogbox(str1:String , str2:String){
         val alertdialog : AlertDialog = AlertDialog.Builder(this).create()
         alertdialog.setTitle(str1)
@@ -125,6 +131,11 @@ class Register : AppCompatActivity() {
         }
 
         alertdialog.show()
+    }
+
+
+    private fun senddata(){
+
     }
 
 }

@@ -19,7 +19,7 @@ class questiondetail : AppCompatActivity() {
         val titletxt: EditText = findViewById(R.id.Title)
         val questiontxt: EditText = findViewById(R.id.questioninput)
         val postquestion: Button = findViewById(R.id.post)
-        val gallery : ImageView = findViewById(R.id.gallery)
+        val name: EditText = findViewById(R.id.nametxt)
 
         val auth = FirebaseAuth.getInstance()
 
@@ -28,10 +28,11 @@ class questiondetail : AppCompatActivity() {
             map["Question"] = questiontxt.text.toString()
             map["Title"] = titletxt.text.toString()
 
-            FirebaseDatabase.getInstance().getReference().child(auth.currentUser?.uid!!).updateChildren(map)
+            FirebaseDatabase.getInstance().getReference().child("User").child(name.text.toString()).updateChildren(map)
                 .addOnCompleteListener {
                     if(it.isSuccessful){
                         Toast.makeText(this,"Question Submitted Successfully",Toast.LENGTH_SHORT).show()
+
                     }else{
                         Toast.makeText(this,it.exception?.message,Toast.LENGTH_LONG).show()
                     }

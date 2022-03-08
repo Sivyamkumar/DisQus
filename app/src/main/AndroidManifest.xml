@@ -15,11 +15,28 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Udghosh">
         <activity
-            android:name=".Answer"
+            android:name=".Solution"
             android:exported="false" />
         <activity
+            android:name=".profile"
+            android:exported="false"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".vc"
+            android:exported="false"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".call"
+            android:exported="false"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Answer"
+            android:exported="false"
+            android:parentActivityName=".MainActivity"/>
+        <activity
             android:name=".questiondetail"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".ui.login.LoginActivity"
             android:exported="false"
